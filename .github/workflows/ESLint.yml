@@ -1,0 +1,49 @@
+name: ESlint
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'side/**'
+      - 'master'
+      - 'indev'
+    paths-ignore:
+      - '.github/**'
+      - '.vscode/**'
+      - '.browserslistrc'
+      - '.eslintignore'
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
+  pull_request:
+    branches:
+      - 'feature/**'
+      - 'side/**'
+      - 'master'
+      - 'indev'
+    paths-ignore:
+      - '.github/**'
+      - '.vscode/**'
+      - '.browserslistrc'
+      - '.eslintignore'
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 13.x, 14.x]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Use Node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Installs global packages
+        run: npm i -g eslint
+      - name: Installs local packages
+        run: npm i
+      - name: Lints the repository for any miscellaneous erros
+        run: npm run lint
