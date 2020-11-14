@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "ES2020",
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "declaration": false,
     "strict": true,
     "noImplicitAny": false,
@@ -12,16 +22,25 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "jsx": "preserve",
+    "typeRoots": ["./src/@types"],
+    "jsx": "react",
     "importHelpers": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "typeRoots": ["./src/@types", "node"],
-    "noEmit": true, // lets snowpack build it, not typescript
+    "baseUrl": "src",
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/": ["src"]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

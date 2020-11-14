@@ -1,11 +1,13 @@
 <html lang='en_US'>
   <head>
-    <title>Docker Registry UI</title>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
-    <link rel='stylesheet' href='/dist/assets/css/styles.css' />
+    <link rel='stylesheet' href='/dist/styles/style.css' />
     <meta charset='UTF-8' />
 
+    <!-- Font Awesome (TODO: maybe find a better alt.?) -->
+    <script src='https://kit.fontawesome.com/0cc597adb3.js' crossorigin='anonymous'></script>
+    <script defer src='/dist/index.js' type='module'></script>
     <script
       data-website-id='43a1c625-78ac-4d9e-b890-7582365a5b61'
       async
@@ -14,8 +16,12 @@
     ></script>
   </head>
   <body>
-    <!-- Vue.js injects styles here owo -->
+    <noscript>
+      <!-- TODO: this -->
+    </noscript>
+
+    <!-- React.js injects styles here owo -->
     <div id='app'></div>
-    <script type='module' src='/dist/main.js'></script>
+    <script type='module' src='/dist/index.js'></script>
   </body>
 </html>
