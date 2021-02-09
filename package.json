@@ -20,7 +20,7 @@
     "react-router-dom": "5.2.0"
   },
   "devDependencies": {
-    "@augu/eslint-config": "1.9.0",
+    "@augu/eslint-config": "1.10.0",
     "@csstools/postcss-sass": "4.0.0",
     "@snowpack/plugin-dotenv": "2.0.5",
     "@snowpack/plugin-postcss": "1.1.0",
