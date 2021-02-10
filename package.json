@@ -32,7 +32,7 @@
     "@types/react-router-dom": "5.1.7",
     "@typescript-eslint/eslint-plugin": "4.7.0",
     "@typescript-eslint/parser": "4.7.0",
-    "eslint": "7.13.0",
+    "eslint": "7.19.0",
     "eslint-plugin-react": "7.21.5",
     "postcss": "8.1.7",
     "postcss-cli": "8.2.0",
